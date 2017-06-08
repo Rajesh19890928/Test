@@ -8,7 +8,7 @@
         <title>Test Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h2>Profile Based Parameters</h2>
         
         <%
             JavaClasses.ReadProperties obj = new JavaClasses.ReadProperties();
@@ -18,9 +18,11 @@
             String webserverv = obj.webserver_version();
         %>
         
+        <div style = "background-color: lightblue;">
         <h2>Database:</h2> <h3><% out.print(db); %></h3>
         <h2>Database URL:</h2> <h3><% out.print(dburl); %></h3>
         <h2>Webserver:</h2> <h3><% out.print(webserver); %></h3>
-        <h2>WebServer Version:</h3> <h2><% out.print(webserverv); %></h3>
+        <h2>WebServer Version:</h3> <h3><% out.print(webserverv); %></h3>
+        </div>
     </body>
 </html>
