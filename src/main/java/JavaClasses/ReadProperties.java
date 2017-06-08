@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 public class ReadProperties {
     public String read_Db_url()
     {
-        java.io.InputStream is = this.getClass().getResourceAsStream("my.properties");
+        java.io.InputStream is = getClass().getClassLoader().getResourceAsStream("my.properties");
         java.util.Properties p = new Properties();
         try {
             p.load(is);

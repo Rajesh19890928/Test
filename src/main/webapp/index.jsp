@@ -14,7 +14,7 @@
         <h1>Hello World!</h1>
         
         <%
-            java.io.InputStream is = this.getClass().getResourceAsStream("my.properties");
+            java.io.InputStream is = getClass().getClassLoader().getResourceAsStream("my.properties");
             java.util.Properties p = new Properties();
             p.load(is);
             String name = p.getProperty("databse_url");
