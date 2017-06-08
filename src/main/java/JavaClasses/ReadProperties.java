@@ -27,4 +27,40 @@ public class ReadProperties {
         String name = p.getProperty("databse_url");
         return name;
     }
+    public String read_Db()
+    {
+        java.io.InputStream is = getClass().getClassLoader().getResourceAsStream("my.properties");
+        java.util.Properties p = new Properties();
+        try {
+            p.load(is);
+        } catch (IOException ex) {
+            Logger.getLogger(ReadProperties.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        String name = p.getProperty("database");
+        return name;
+    }
+    public String webserver()
+    {
+        java.io.InputStream is = getClass().getClassLoader().getResourceAsStream("my.properties");
+        java.util.Properties p = new Properties();
+        try {
+            p.load(is);
+        } catch (IOException ex) {
+            Logger.getLogger(ReadProperties.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        String name = p.getProperty("webserver");
+        return name;
+    }
+    public String webserver_version()
+    {
+        java.io.InputStream is = getClass().getClassLoader().getResourceAsStream("my.properties");
+        java.util.Properties p = new Properties();
+        try {
+            p.load(is);
+        } catch (IOException ex) {
+            Logger.getLogger(ReadProperties.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        String name = p.getProperty("webserver_version");
+        return name;
+    }
 }

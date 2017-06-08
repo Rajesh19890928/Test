@@ -103,10 +103,10 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
+                <database>dev_db</database>
                 <databse_url>dev_database_url</databse_url>
                 <webserver>dev_webserver</webserver>
                 <webserver_version>dev_webserver_version</webserver_version>
-                <database>dev_db</database>
             </properties>
         </profile>
 
@@ -119,10 +119,10 @@
                 </property>
             </activation>
             <properties>
+                <database>qa_db</database>
                 <databse_url>qa_database_url</databse_url>
                 <webserver>qa_webserver</webserver>
                 <webserver_version>qa_webserver_version</webserver_version>
-                <database>qa_db</database>
             </properties>
         </profile>
     </profiles>
