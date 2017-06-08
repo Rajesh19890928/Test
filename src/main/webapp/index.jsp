@@ -18,9 +18,9 @@
             String webserverv = obj.webserver_version();
         %>
         
-        <h1>Database:</h1> <h2><% out.print(db); %></h2>
-        <h1>Database URL:</h1> <h2><% out.print(dburl); %></h2>
-        <h1>Webserver:</h1> <h2><% out.print(webserver); %></h2>
-        <h1>WebServer Version:</h1> <h2><% out.print(webserverv); %></h2>
+        <h2>Database:</h2> <h3><% out.print(db); %></h3>
+        <h2>Database URL:</h2> <h3><% out.print(dburl); %></h3>
+        <h2>Webserver:</h2> <h3><% out.print(webserver); %></h3>
+        <h2>WebServer Version:</h3> <h2><% out.print(webserverv); %></h3>
     </body>
 </html>
