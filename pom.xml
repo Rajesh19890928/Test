@@ -114,7 +114,7 @@
             <activation>
                 <property>
                     <name>env</name>
-                    <value>QA</value>
+                    <value>qa</value>
                 </property>
             </activation>
             <properties>
