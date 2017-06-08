@@ -19,6 +19,6 @@
             p.load(is);
             String name = p.getProperty("databse_url");
         %>
-        DB URL: <% out.print(name); %>
+        <h1>DB URL: <% out.print(name); %></h1>
     </body>
 </html>
