@@ -13,8 +13,14 @@
         <%
             JavaClasses.ReadProperties obj = new JavaClasses.ReadProperties();
             String dburl = obj.read_Db_url();
+            String db = obj.read_Db();
+            String webserver = obj.webserver();
+            String webserverv = obj.webserver_version();
         %>
         
-        <h1>DB URL: <% out.print(dburl); %></h1>
+        <h1>Database: <% out.print(db); %></h1>
+        <h1>Database URL: <% out.print(dburl); %></h1>
+        <h1>Webserver: <% out.print(webserver); %></h1>
+        <h1>WebServer Version: <% out.print(webserverv); %></h1>
     </body>
 </html>
