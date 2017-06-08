@@ -5,9 +5,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Test Page</title>
     </head>
     <body>
         <h1>Hello World!</h1>
+        
+        <%
+            JavaClasses.ReadProperties obj = new JavaClasses.ReadProperties();
+            String db_url = obj.read_Db_url();
+        %>
+        DB URL: <% out.print(db_url); %>
     </body>
 </html>

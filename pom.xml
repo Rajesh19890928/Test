@@ -12,6 +12,10 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <databse_url>${databse_url}</databse_url>
+        <webserver>${webserver}</webserver>
+        <webserver_version>${webserver_version}</webserver_version>
+        <database>${database}</database>
     </properties>
 
     <dependencies>
@@ -70,7 +74,56 @@
                     </execution>
                 </executions>
             </plugin>
+            
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.0-alpha-2</version>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>write-project-properties</goal>
+                        </goals>
+                        <configuration>
+                            <outputFile>${project.build.outputDirectory}/my.properties</outputFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            
         </plugins>
     </build>
+    
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <databse_url>dev_database_url</databse_url>
+                <webserver>dev_webserver</webserver>
+                <webserver_version>dev_webserver_version</webserver_version>
+                <database>dev_db</database>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>QA</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>QA</value>
+                </property>
+            </activation>
+            <properties>
+                <databse_url>qa_database_url</databse_url>
+                <webserver>qa_webserver</webserver>
+                <webserver_version>qa_webserver_version</webserver_version>
+                <database>qa_db</database>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>
