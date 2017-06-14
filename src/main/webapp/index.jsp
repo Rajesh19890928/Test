@@ -26,7 +26,7 @@
         </div>
         <div>
             <h1>From Jenkins Environment Variables</h1>
-            <%String url = System.getProperty("jenkins.weburl");%>
+            <%String url = System.getenv("WEB_URL");%>
             Web url = <% out.print(url); %>
         </div>    
     </body>

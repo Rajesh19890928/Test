@@ -16,7 +16,6 @@
         <webserver>${webserver}</webserver>
         <webserver_version>${webserver_version}</webserver_version>
         <database>${database}</database>
-        <jenkins.weburl>${WEB_URL}</jenkins.weburl>
     </properties>
 
     <dependencies>
