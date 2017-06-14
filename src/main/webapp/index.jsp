@@ -24,5 +24,10 @@
         <h2>Webserver:</h2> <h3><% out.print(webserver); %></h3>
         <h2>WebServer Version:</h3> <h3><% out.print(webserverv); %></h3>
         </div>
+        <div>
+            <h1>From Jenkins Environment Variables</h1>
+            <%String url = System.getProperty("jenkins.weburl");%>
+            Web url = <% out.print(url); %>
+        </div>    
     </body>
 </html>
